@@ -3,7 +3,6 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -11,10 +10,10 @@ public class WebAPI {
 
     public static void main(String[] args)
     {
-        String APIkey = "COPY/PASTE YOUR API KEY HERE";
+        String APIkey = "02924c4f8fbbd88c404cc1e4942fb5f1";
         String urlNowPlaying = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + APIkey;
         String response = makeAPICall(urlNowPlaying);
-
+        System.out.println(response);
         ArrayList<Movie> movies = new ArrayList<Movie>();
         if (response != null)
         {
